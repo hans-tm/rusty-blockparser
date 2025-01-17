@@ -35,6 +35,7 @@ pub struct Dogecoin;
 pub struct Myriadcoin;
 pub struct Unobtanium;
 pub struct NoteBlockchain;
+pub struct ShibaInucoin;
 //pub struct Dash;
 
 impl Coin for Bitcoin {
@@ -193,6 +194,28 @@ impl Coin for NoteBlockchain {
     }
     fn default_folder(&self) -> PathBuf {
         Path::new(".notecoin").join("blocks")
+    }
+}
+
+impl Coin for ShibaInucoin {
+    fn name(&self) -> String {
+        String::from("ShibaInucoin")
+    }
+    fn magic(&self) -> u32 {
+        0xf0e0c0b0
+    }
+    fn version_id(&self) -> u8 {
+        0x3f
+    }
+    fn genesis(&self) -> sha256d::Hash {
+        sha256d::Hash::from_str("ff271edcc83f7d71e7a4e4b0a43b386a188e1470a28671cdbdc47e900118ac7f")
+            .unwrap()
+    }
+    fn aux_pow_activation_version(&self) -> Option<u32> {
+        Some(0x620102)
+    }
+    fn default_folder(&self) -> PathBuf {
+        Path::new(".dogecoin").join("blocks")
     }
 }
 
