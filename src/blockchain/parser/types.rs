@@ -212,7 +212,7 @@ impl Coin for ShibaInucoin {
             .unwrap()
     }
     fn aux_pow_activation_version(&self) -> Option<u32> {
-        Some(0x620102)
+        Some(0x4a0104)
     }
     fn default_folder(&self) -> PathBuf {
         Path::new(".dogecoin").join("blocks")
