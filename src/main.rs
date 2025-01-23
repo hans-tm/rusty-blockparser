@@ -92,7 +92,7 @@ fn command() -> Command {
         "myriadcoin",
         "unobtanium",
         "noteblockchain",
-        "shibainucoin",
+        "shibacoin",
     ];
     Command::new("rusty-blockparser")
     .version(crate_version!())

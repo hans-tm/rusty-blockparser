@@ -35,7 +35,7 @@ pub struct Dogecoin;
 pub struct Myriadcoin;
 pub struct Unobtanium;
 pub struct NoteBlockchain;
-pub struct ShibaInucoin;
+pub struct Shibacoin;
 //pub struct Dash;
 
 impl Coin for Bitcoin {
@@ -197,9 +197,9 @@ impl Coin for NoteBlockchain {
     }
 }
 
-impl Coin for ShibaInucoin {
+impl Coin for Shibacoin {
     fn name(&self) -> String {
-        String::from("ShibaInucoin")
+        String::from("Shibacoin")
     }
     fn magic(&self) -> u32 {
         0xf0e0c0b0
@@ -215,7 +215,7 @@ impl Coin for ShibaInucoin {
         Some(0x4a0104)
     }
     fn default_folder(&self) -> PathBuf {
-        Path::new(".dogecoin").join("blocks")
+        Path::new(".shibacoin").join("blocks")
     }
 }
 
@@ -270,7 +270,7 @@ impl FromStr for CoinType {
             "myriadcoin" => Ok(CoinType::from(Myriadcoin)),
             "unobtanium" => Ok(CoinType::from(Unobtanium)),
             "noteblockchain" => Ok(CoinType::from(NoteBlockchain)),
-            "shibainucoin" => Ok(CoinType::from(ShibaInucoin)),
+            "shibacoin" => Ok(CoinType::from(Shibacoin)),
             n => {
                 let e = OpError::new(OpErrorKind::InvalidArgsError)
                     .join_msg(&format!("There is no impl for `{}`!", n));
