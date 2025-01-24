@@ -33,7 +33,7 @@ Options:
   -v...
           Increases verbosity level. Info=0, Debug=1, Trace=2 (default: 0)
   -c, --coin <NAME>
-          Specify blockchain coin (default: bitcoin) [possible values: bitcoin, testnet3, namecoin, litecoin, dogecoin, myriadcoin, unobtanium, noteblockchain]
+          Specify blockchain coin (default: bitcoin) [possible values: bitcoin, testnet3, namecoin, litecoin, dogecoin, myriadcoin, unobtanium, noteblockchain, shibacoin]
   -d, --blockchain-dir <blockchain-dir>
           Sets blockchain directory which contains blk.dat files (default: ~/.bitcoin/blocks)
   -s, --start <HEIGHT>
